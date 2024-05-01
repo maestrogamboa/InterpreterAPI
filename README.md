@@ -1,7 +1,7 @@
 # InterpreterAPI
 This project is for the API portion of the Interpreter App Submition for the Google Hackathon project
 
-# InterpreterAPI
+# ProjectSetup
 The project uses Docker for development purposes. Here's how to get setup.
 1. Clone the respository
 2. Open Docker desktop app or make sure is running in the background
