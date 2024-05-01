@@ -8,7 +8,7 @@ video_api = Blueprint('video_api', __name__)
 
 @app.get('/test')
 def video_test():
-    return 'video works'
+    return {"response":'route works'}
 
 @app.route('/get_video', methods=['POST'])
 def get_video():
@@ -21,7 +21,7 @@ def get_video():
 @app.route('/store_video', methods=['POST'])
 def store_video():
     body = request.json
-    file = rf'{body['file']}'
+    file = rf"{body['file']}"
     vide_name = body['video_name']
     result = video.upload_video(file, vide_name)
     return result

@@ -9,7 +9,6 @@ import time
 import requests
 import tempfile
 import wave
-import magic
 from moviepy.editor import *
 import subprocess
 
@@ -118,18 +117,6 @@ safety_settings = {
 
 #multiturn_generate_content( "It looks like you just"
                                            # "got an Xray", "parece que ah hecho una radiografía ")
-
-def detect_audio_format(file_path):
-    # Create a magic object
-    mime = magic.Magic(mime=True)
-
-    # Open the file in binary mode
-    with open(file_path, 'rb') as file:
-        # Read the first 2048 bytes of the file to detect its type
-        file_type = mime.from_buffer(file.read(2048))
-
-    return file_type
-
 
 def convert_webm_to_wav(input_file, output_file):
     # Load the WebM video file
